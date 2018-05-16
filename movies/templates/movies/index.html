@@ -11,16 +11,19 @@
     <h1>bet</h1>
 
 
+
     <div class="card-deck">
         {% for movie in results %}
-        <div class="card" style="max-width: 600px;">
+        <!-- <div class="card" style="max-width: 600px;">
             <img class="card-img-top" src="{{movie.poster}}" alt="Card image cap" style="max-width: 600px;">
             <div class="card-body">
             <h5 class="card-title">{{movie.title}}</h5>
             <p class="card-text">{{movie.year}}</p>
             <p class="card-text"><small class="text-muted">imdbID: {{movie.imdb_id}}</small></p>
             </div>
-        </div>
+        </div> -->
+        <p>{{movie.title}}</p>
+        <small>{{movie.popularity}}</small>
         {% endfor %}
     </div>
 </body>

@@ -7,25 +7,60 @@
     <title>LibreMovies</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>bet</h1>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LibreMovies</a>
+    </nav>
 
+    <br>
 
+    <div class="container" style="min-width: 90%;">
+        <h2>Popular Movies</h2>
 
-    <div class="card-deck">
-        {% for movie in results %}
-        <!-- <div class="card" style="max-width: 600px;">
-            <img class="card-img-top" src="{{movie.poster}}" alt="Card image cap" style="max-width: 600px;">
-            <div class="card-body">
-            <h5 class="card-title">{{movie.title}}</h5>
-            <p class="card-text">{{movie.year}}</p>
-            <p class="card-text"><small class="text-muted">imdbID: {{movie.imdb_id}}</small></p>
+        <div class="card-deck">
+            {% for movie in results %}
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{movie.poster}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p class="card-text">{{movie.popularity}}</p>
+                    <p class="card-text"><small class="text-muted">imdbID: {{movie.imdb_id}}</small></p>
+                    <button type="button" class="btn btn-dark">Watch Movie</button>
+                </div>
             </div>
-        </div> -->
-        <p>{{movie.title}}</p>
-        <small>{{movie.popularity}}</small>
-        {% endfor %}
+            <!-- <p>{{movie.title}}</p>
+            <small>{{movie.popularity}}</small> -->
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Latest Movies</h2>
+        
+        <div class="card-deck">
+            {% for movie in results %}
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{movie.poster}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p class="card-text">{{movie.popularity}}</p>
+                    <p class="card-text"><small class="text-muted">imdbID: {{movie.imdb_id}}</small></p>
+                    <button type="button" class="btn btn-dark">Watch Movie</button>
+                </div>
+            </div>
+            <!-- <p>{{movie.title}}</p>
+            <small>{{movie.popularity}}</small> -->
+            {% endfor %}
+        </div>
     </div>
+
+    <br>
+
+    <nav class="navbar sticky-bottom navbar-dark bg-dark">
+        <small class="text-secondary">&copy 2018 LibreMovies</small>
+        <span class="navbar-text"><small class="text-secondary">No data is hosted on this site.</small></span>
+    </nav>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

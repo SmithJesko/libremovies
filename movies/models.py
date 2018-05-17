@@ -1,7 +1,8 @@
 from django.db import models
 
 
-class SearchResult(models.Model):
+class PopularMovie(models.Model):
+    movie_id = models.CharField(max_length=20)
     imdb_id = models.CharField(max_length=20)
     title = models.CharField(max_length=150)
     year = models.CharField(max_length=10)
@@ -11,8 +12,8 @@ class SearchResult(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'SearchResult'
-        verbose_name_plural = 'SearchResults'
+        verbose_name = 'PopularMovie'
+        verbose_name_plural = 'PopularMovies'
 
 class Movie(models.Model):
     pass

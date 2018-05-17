@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import SearchResult
+from .models import PopularMovie
 
 
-admin.site.register(SearchResult)
+admin.site.register(PopularMovie)

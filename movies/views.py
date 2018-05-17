@@ -3,8 +3,8 @@ import requests
 
 from .models import PopularMovie
 
-popular_apikey = '25b5fe2c16a3d43e789fb1b629b5db46'
-movie_apikey = 'd30f5732'
+from .secrets import movie_apikey, popular_apikey
+
 
 def index(request):
     movies = []

@@ -32,7 +32,7 @@ def index(request):
 
             popular_movie.update({'poster': requests.get('http://www.omdbapi.com/?apikey={}&i={}'.format(movie_apikey, popular_movie['imdb_id'])).json()['Poster']})
 
-            result = PopularMovie(movie_id=popular_movie['id'], imdb_id=popular_movie['imdb_id'], title=popular_movie['title'], year=127, poster=popular_movie['poster'])
+            result = PopularMovie(movie_id=popular_movie['id'], imdb_id=popular_movie['imdb_id'], title=popular_movie['title'], popularity=popular_movie['popularity'], poster=popular_movie['poster'])
             result.save()
             print("# Movie not in database; added...")
 
